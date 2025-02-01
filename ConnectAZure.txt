@@ -1,0 +1,9 @@
+# Change the execution policy to unblock importing AzFilesHybrid.psm1 module
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+
+# Login to Azure using a credential that has either storage account owner or contributor Azure role 
+# assignment. If you are logging into an Azure environment other than Public (ex. AzureUSGovernment) 
+# you will need to specify that.
+# See https://learn.microsoft.com/azure/azure-government/documentation-government-get-started-connect-with-ps
+# for more information.
+Connect-AzAccount
